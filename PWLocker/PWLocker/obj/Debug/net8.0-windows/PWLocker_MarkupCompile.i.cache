@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\GitHub\PWLocker\PWLocker\PWLocker\obj\Debug\net8.0-windows\
+A:\GitHub\PWLocker\PWLocker\PWLocker\obj\Debug\net8.0-windows\
 PWLocker
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\GitHub\PWLocker\PWLocker\PWLocker\App.xaml
+A:\GitHub\PWLocker\PWLocker\PWLocker\App.xaml
 2-1408134784
 
-7-873195688
-198-556154604
+8-709636024
+205-1680711871
 AddForm.xaml;MainWindow.xaml;
 
 True

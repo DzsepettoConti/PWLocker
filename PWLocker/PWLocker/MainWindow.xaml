@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PWLocker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1400">
+        Title="MainWindow" Height="800" Width="1400" Loaded="mainWindowLoad">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -24,6 +24,7 @@
             <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Grid.Column="0">
                 <StackPanel>
                     <Button Name="addButton" Height="80" Width="100" Margin="0,20,0,0" Click="addButtonClick"/>
+                    <Button Name="syncButton" Height="80" Width="100" Margin="0,20,0,0" Click="syncButtonClick"/>
                     <TextBox Height="50" Width="100" Margin="10"/>
                     <TextBox Height="50" Width="100" Margin="10"/>
                     <TextBox Height="50" Width="100" Margin="10"/>
@@ -36,9 +37,7 @@
                         <Button Height="30" Width="70" Margin="180,0,0,0"></Button>
                         <Button Height="30" Width="70" Margin="10,0,0,0"></Button>
                         <Button Height="30" Width="70" Margin="10,0,0,0"></Button>
-                        <Button Height="30" Width="70" Margin="10,0,10,0">
-                            <TextBlock Text="Customize"  ></TextBlock>
-                        </Button>
+                        <Button Name="Remove" Height="30" Width="70" Margin="10,0,10,0" Click="deleteButtonClick" />
                     </DockPanel>
                 </StackPanel>
             </ScrollViewer>
