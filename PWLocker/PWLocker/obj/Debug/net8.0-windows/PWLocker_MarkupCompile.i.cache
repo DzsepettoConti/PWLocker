@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 A:\GitHub\PWLocker\PWLocker\PWLocker\App.xaml
-2-1408134784
+3-577540383
 
-8-709636024
+101132854456
 205-1680711871
-AddForm.xaml;MainWindow.xaml;
+AddForm.xaml;LoginRegister.xaml;MainWindow.xaml;
 
 True
 

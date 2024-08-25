@@ -33,14 +33,15 @@ namespace PWLocker
             InitializeComponent();
         }
 
-        IFirebaseConfig fconfig = new FirebaseConfig(){
+        IFirebaseConfig fconfig = new FirebaseConfig()
+        {
             AuthSecret = "7o9oh4EvBAN5maV69Wbxysbi7fJ91hqsmIPEUNWd",
             BasePath = "https://pwlocker-8782c-default-rtdb.europe-west1.firebasedatabase.app/"
         };
         IFirebaseClient client;
         private void mainWindowLoad(object sender, RoutedEventArgs e)
         {
-            
+
             try
             {
                 client = new FireSharp.FirebaseClient(fconfig);
@@ -61,17 +62,17 @@ namespace PWLocker
 
         public static int Szamlalalo { get => szamlalalo; set => szamlalalo = value; }
 
-        public static int GenNextId() 
+        public static int GenNextId()
         {
             szamlalalo++;
             return szamlalalo;
         }
-        public void addButtonFunction(string Title) 
+        public void addButtonFunction(string Title)
         {
             // Create a new DockPanel
             DockPanel newDockPanel = new DockPanel
             {
-                
+
                 Height = 50,
                 Width = 700,
                 Margin = new Thickness(10)
@@ -80,7 +81,7 @@ namespace PWLocker
             // Create the TextBox
             TextBox myTextBox = new TextBox
             {
-                Name = "myTextBox",
+                Name = Title,
                 Text = Title,
                 Width = 200,
                 Height = 50,
@@ -91,11 +92,11 @@ namespace PWLocker
             // Create the first Button
             Button button1 = new Button
             {
-                
+
                 Height = 30,
                 Width = 70,
                 Margin = new Thickness(180, 0, 0, 0)
-                 };
+            };
             newDockPanel.Children.Add(button1);
 
             // Create the second Button
@@ -134,7 +135,7 @@ namespace PWLocker
         private void addButtonClick(object sender, RoutedEventArgs e)
         {
             AddForm addForm = new AddForm();
-            if (addForm.ShowDialog() == true) 
+            if (addForm.ShowDialog() == true)
             {
                 GenNextId();
                 addButtonFunction(addForm.TitleText);
@@ -145,11 +146,11 @@ namespace PWLocker
             LiveCall();
         }
 
-        async void LiveCall() 
+        async void LiveCall()
         {
             FirebaseResponse res = client.Get(@"Elemets");
             Dictionary<string, DockerElement> data = JsonConvert.DeserializeObject<Dictionary<string, DockerElement>>(res.Body.ToString());
-            foreach (var item in data) 
+            foreach (var item in data)
             {
                 string elementString = item.Value.ToString();
                 elementList.Add(elementString);
@@ -159,16 +160,43 @@ namespace PWLocker
 
         private void deleteButtonClick(object sender, RoutedEventArgs e)
         {
-            
-            Button button = sender as Button;
+            string textboxName;
 
-            DockPanel dockPanel = button.Parent as DockPanel;
+            MessageBoxResult valasz = MessageBox.Show("Biztos Törölni akarja az adott Egységet?", "Kérdés", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
-            if (dockPanel != null)
+            if (valasz == MessageBoxResult.Yes)
             {
-                MainStackPanel.Children.Remove(dockPanel);
-                MessageBox.Show("Törölve");
+                Button button = sender as Button;
+
+                DockPanel dockPanel = button.Parent as DockPanel;
+
+                foreach (var child in dockPanel.Children)
+                {
+                    if (child is TextBox)
+                    {
+                        
+                        TextBox foundTextBox = (TextBox)child;
+                        textboxName = foundTextBox.Name;
+                        var result = client.Delete(@"Elemets/" + textboxName);
+                    }
+                }
+                if (dockPanel != null)
+                {
+                    MainStackPanel.Children.Remove(dockPanel);
+                }
             }
+            else if (valasz == MessageBoxResult.No)
+            {
+                MessageBox.Show("A Nem gombra kattintottál.");
+            }
+        }
+
+        private void LoginButtonClick(object sender, RoutedEventArgs e)
+        {
+            LoginRegister logreg = new LoginRegister();
+            if (logreg.ShowDialog() == true)
+            { }
+
         }
     }
 }
