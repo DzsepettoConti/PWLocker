@@ -4,44 +4,46 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PWLocker"
-        mc:Ignorable="d"
+        mc:Ignorable="d" x:Name="_BaseButton"
         Title="MainWindow" Height="800" Width="1400" Loaded="mainWindowLoad">
+    <Window.Resources>
+
+
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100" />
+            <RowDefinition Height="100"  />
             <RowDefinition />
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
+        <TextBlock Background="LightBlue" Grid.Row="0"/>
+        <TextBlock Background="Indigo" Grid.Row="2"/>
 
         <Grid Grid.Row="1" Grid.ColumnSpan="2" >
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width=".1*" />
                 <ColumnDefinition Width=".9*" />
             </Grid.ColumnDefinitions>
+            <TextBlock Background="Azure" Grid.Row="1" Grid.Column="0"/>
+            <TextBlock Background="BlanchedAlmond" Grid.Row="1" Grid.Column="1"/>
             <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Grid.Column="0">
                 <StackPanel>
-                    <Button Name="addButton" Height="80" Width="100" Margin="0,20,0,0" Click="addButtonClick"/>
-                    <Button Name="syncButton" Height="80" Width="100" Margin="0,20,0,0" Click="syncButtonClick"/>
-                    <TextBox Height="50" Width="100" Margin="10"/>
-                    <TextBox Height="50" Width="100" Margin="10"/>
-                    <TextBox Height="50" Width="100" Margin="10"/>
+                    <local:BaseButton Content="Add new" Style="{StaticResource PrimaryButtonStyle}" Height="80" Width="100" Margin="10" Click="addButtonClick" />
+                    <local:BaseButton Content="Coming soon..." Style="{StaticResource PrimaryButtonStyle}" Height="80" Width="100" Margin="10" />
                 </StackPanel>
             </ScrollViewer>
             <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Grid.Column="1">
                 <StackPanel Name="MainStackPanel">
-                    <DockPanel Height="50" Width="700" Margin="10" Name="dockPanelSample">
-                        <TextBox Name="myTextBox" Text="Hello, World!" Width="200" Height="50" FontSize="36"/>
-                        <Button Height="30" Width="70" Margin="180,0,0,0"></Button>
-                        <Button Height="30" Width="70" Margin="10,0,0,0"></Button>
-                        <Button Height="30" Width="70" Margin="10,0,0,0"></Button>
-                        <Button Name="Remove" Height="30" Width="70" Margin="10,0,10,0" Click="deleteButtonClick" />
-                    </DockPanel>
+
                 </StackPanel>
             </ScrollViewer>
         </Grid>
-        <Button Content="Login" HorizontalAlignment="Left" Margin="1334,35,0,0" VerticalAlignment="Top" Click="LoginButtonClick"/>
+        <Label Content="username" HorizontalAlignment="Left"  VerticalAlignment="Center" Name="lbUsername" Height="50" Width="100" Margin="1050,40,0,0" FontSize="20"/>
+        <local:BaseButton Content="Login" Style="{StaticResource SecondaryButtonStyle}" Height="50" Width="100" Margin="1290,40,0,0" VerticalAlignment="Top" FontSize="20" Click="LoginButtonClick" HorizontalAlignment="Left" />
+        <local:BaseButton Content="Register" Style="{StaticResource SecondaryButtonStyle}" Height="50" Width="100" Margin="1180,40,0,0" VerticalAlignment="Top" FontSize="20" Click="RegisterButtonClick" HorizontalAlignment="Left"/>
     </Grid>
 </Window>

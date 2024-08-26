@@ -6,12 +6,14 @@
         xmlns:local="clr-namespace:PWLocker"
         mc:Ignorable="d"
         Title="LoginRegister" Height="200" Width="350">
-    <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="254,142,0,0" VerticalAlignment="Top" Click="lrWindowDoneClick"/>
+    <Grid Loaded="LoginRegisterWindowLoad">
+        <Button Name="btnLogin" Content="Login" HorizontalAlignment="Left" Margin="254,142,0,0" VerticalAlignment="Top" Click="lrWindowLoginClick"/>
+        <Button Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="202,142,0,0" VerticalAlignment="Top" Click="lrWindowRegisterClick"/>
         <Label Content="Username" HorizontalAlignment="Left" Margin="69,49,0,0" VerticalAlignment="Top"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="69,75,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="137,57,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="120" Name="tbUsername"/>
-        <TextBox HorizontalAlignment="Left" Margin="137,0,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Center" Width="120" Name="tbPassword"/>
-
+        <Label Content="Password" HorizontalAlignment="Left" Margin="69,0,0,0" VerticalAlignment="Center"/>
+        <TextBox HorizontalAlignment="Left" Margin="161,57,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="120" Name="tbUsername"/>
+        <TextBox HorizontalAlignment="Left" Margin="161,87,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="120" Name="tbPassword"/>
+        <TextBox HorizontalAlignment="Left" Margin="161,113,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="120" Name="tbPassword2"/>
+        <Label Content="Password again" HorizontalAlignment="Left" Margin="69,109,0,0" VerticalAlignment="Top" Name="lbPasswordAgain"/>
     </Grid>
 </Window>

@@ -50,22 +50,15 @@ namespace PWLocker
             {
                 MessageBox.Show("Net Error");
             }
-            LiveCall();
-            foreach (string element in elementList)
-            {
-                string[] parts = element.Split(";");
-                addButtonFunction(parts[0]);
-            }
-
 
         }
-
         public static int Szamlalalo { get => szamlalalo; set => szamlalalo = value; }
 
         public static int GenNextId()
         {
             szamlalalo++;
             return szamlalalo;
+            
         }
         public void addButtonFunction(string Title)
         {
@@ -134,28 +127,30 @@ namespace PWLocker
         }
         private void addButtonClick(object sender, RoutedEventArgs e)
         {
-            AddForm addForm = new AddForm();
+            string currentusername = Convert.ToString(lbUsername.Content);
+            AddForm addForm = new AddForm(currentusername);
             if (addForm.ShowDialog() == true)
             {
                 GenNextId();
                 addButtonFunction(addForm.TitleText);
             }
         }
-        private async void syncButtonClick(object sender, RoutedEventArgs e)
-        {
-            LiveCall();
-        }
 
-        async void LiveCall()
+        async void LiveCall(string currentusername)
         {
-            FirebaseResponse res = client.Get(@"Elemets");
+            string databasePath = $"Users/{currentusername}/Elements/";
+            MessageBox.Show(databasePath);
+            FirebaseResponse res = client.Get(@$"{databasePath}");
             Dictionary<string, DockerElement> data = JsonConvert.DeserializeObject<Dictionary<string, DockerElement>>(res.Body.ToString());
-            foreach (var item in data)
+            if (data != null && data.Count > 0)
             {
-                string elementString = item.Value.ToString();
-                elementList.Add(elementString);
+                foreach (var item in data)
+                {
+                    string elementString = item.Value.ToString();
+                    elementList.Add(elementString);
+                }
+                File.WriteAllLines("databaseTest.txt", elementList);
             }
-            File.WriteAllLines("databaseTest.txt", elementList);
         }
 
         private void deleteButtonClick(object sender, RoutedEventArgs e)
@@ -174,10 +169,10 @@ namespace PWLocker
                 {
                     if (child is TextBox)
                     {
-                        
+                        string currentusername = Convert.ToString(lbUsername.Content);
                         TextBox foundTextBox = (TextBox)child;
                         textboxName = foundTextBox.Name;
-                        var result = client.Delete(@"Elemets/" + textboxName);
+                        var result = client.Delete(@$"Users/{currentusername}/Elements/" + textboxName);
                     }
                 }
                 if (dockPanel != null)
@@ -194,10 +189,39 @@ namespace PWLocker
         private void LoginButtonClick(object sender, RoutedEventArgs e)
         {
             LoginRegister logreg = new LoginRegister();
+            logreg.btnLogin.Visibility = Visibility.Visible;
+            logreg.btnRegister.Visibility = Visibility.Hidden;
+            logreg.lbPasswordAgain.Visibility = Visibility.Hidden;
+            logreg.tbPassword2.Visibility = Visibility.Hidden;
             if (logreg.ShowDialog() == true)
-            { }
-
+            {
+                lbUsername.Content = logreg.mainUsername;
+                string currentusername = Convert.ToString(lbUsername.Content);
+                MessageBox.Show($"Ez a user: {currentusername}");
+                LiveCall(currentusername);
+                foreach (string element in elementList)
+                {
+                    string[] parts = element.Split(";");
+                    addButtonFunction(parts[0]);
+                }
+            }
         }
+        private void RegisterButtonClick(object sender, RoutedEventArgs e)
+        {
+            LoginRegister logreg = new LoginRegister();
+            AddForm af = new AddForm();
+            logreg.btnLogin.Visibility = Visibility.Hidden;
+            logreg.btnRegister.Visibility = Visibility.Visible;
+            logreg.lbPasswordAgain.Visibility = Visibility.Visible;
+            logreg.tbPassword2.Visibility = Visibility.Visible;
+            if (logreg.ShowDialog() == true)
+            {
+                lbUsername.Content = logreg.mainUsername;
+                string currentusername = Convert.ToString(lbUsername.Content);
+                LiveCall(currentusername);
+            }
+        }
+
     }
 }
 

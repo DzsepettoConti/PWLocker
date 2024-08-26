@@ -15,7 +15,7 @@
         <TextBox Name="tbUsername" HorizontalAlignment="Left" Margin="105,49,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="120"/>
         <TextBox Name="tbEmail" HorizontalAlignment="Left" Margin="105,80,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="120"/>
         <TextBox Name="tbPassword" HorizontalAlignment="Left" Margin="105,111,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="120"/>
-        <Button Name="btnSubmit" Width="70" Content="Submit" HorizontalAlignment="Left" Margin="250,80,0,0" VerticalAlignment="Top" Click="btnSubmitClick"/>
+        <Button Name="btnSubmit" Width="70" Content="Submit" HorizontalAlignment="Left" Margin="250,80,0,0" VerticalAlignment="Top" Click="SubmitClick"/>
         <Button Name="btnCancel" Width="70" Content="Cancel" HorizontalAlignment="Left" Margin="250,110,0,0" VerticalAlignment="Top" Click="btnCancel_Click"/>
 
 

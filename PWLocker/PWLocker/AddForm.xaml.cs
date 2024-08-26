@@ -1,5 +1,6 @@
 ﻿using FireSharp.Config;
 using FireSharp.Interfaces;
+using FireSharp.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,14 +22,23 @@ namespace PWLocker
     /// </summary>
     public partial class AddForm : Window
     {
+        
         public string TitleText { get; private set; }
         public string UsernameText { get; private set; }
+        public string MainUser { get; private set; }
+
         public string PasswordText { get; private set; }
         public string EmailText { get; private set; }
 
         public AddForm()
         {
             InitializeComponent();
+   
+        }
+        public AddForm(string username)
+        {
+            InitializeComponent();
+            MainUser = username;
         }
         IFirebaseConfig fconfig = new FirebaseConfig()
         {
@@ -59,29 +69,24 @@ namespace PWLocker
                 MessageBox.Show("Net Error");
             }
         }
-
-
-
-
-
-        private void btnSubmitClick(object sender, RoutedEventArgs e)
+        private void SubmitClick(object sender, RoutedEventArgs e)
         {
+
+            //LoginRegister lr = new LoginRegister();
+
             TitleText = tbTitle.Text;
             UsernameText = tbUsername.Text;
             PasswordText = tbPassword.Text;
             EmailText = tbEmail.Text;
 
-            DockerElement de = new DockerElement(
-             TitleText,
-             UsernameText,
-             PasswordText,
-             EmailText);
-            var setter = client.Set("Elemets/" + TitleText, de);
-            MessageBox.Show("Data Inserted");
+            DockerElement de = new DockerElement(TitleText,UsernameText,PasswordText,EmailText);
+
+            var setter = client.Set($"Users/{MainUser}/Elements/" + TitleText, de);
+            MessageBox.Show($"Data Inserted:{MainUser}");
 
 
             this.DialogResult = true;
-            this.Close();
+           
         }
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
@@ -89,6 +94,9 @@ namespace PWLocker
             this.Close();
         }
 
-
+        private void testClick(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

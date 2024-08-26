@@ -10,8 +10,15 @@ namespace PWLocker
     {
        private string mainUserName, mainPassword;
 
+        public MainUser(string mainUserName, string mainPassword)
+        {
+            this.MainUserName = mainUserName;
+            this.MainPassword = mainPassword;
+        }
+
         public string MainUserName { get => mainUserName; set => mainUserName = value; }
         public string MainPassword { get => mainPassword; set => mainPassword = value; }
+
 
         public override string ToString()
         {
