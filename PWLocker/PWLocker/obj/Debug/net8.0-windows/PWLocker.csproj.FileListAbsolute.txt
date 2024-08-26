@@ -69,3 +69,6 @@ D:\GitHub\PWLocker\PWLocker\PWLocker\obj\Debug\net8.0-windows\PWLocker.csproj.Up
 D:\GitHub\PWLocker\PWLocker\PWLocker\obj\Debug\net8.0-windows\BaseButton.g.cs
 D:\GitHub\PWLocker\PWLocker\PWLocker\obj\Debug\net8.0-windows\BaseButton.baml
 D:\GitHub\PWLocker\PWLocker\PWLocker\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+A:\GitHub\PWLocker\PWLocker\PWLocker\obj\Debug\net8.0-windows\BaseButton.g.cs
+A:\GitHub\PWLocker\PWLocker\PWLocker\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+A:\GitHub\PWLocker\PWLocker\PWLocker\obj\Debug\net8.0-windows\BaseButton.baml

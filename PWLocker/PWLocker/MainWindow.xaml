@@ -44,6 +44,6 @@
         </Grid>
         <Label Content="username" HorizontalAlignment="Left"  VerticalAlignment="Center" Name="lbUsername" Height="50" Width="100" Margin="1050,40,0,0" FontSize="20"/>
         <local:BaseButton Content="Login" Style="{StaticResource SecondaryButtonStyle}" Height="50" Width="100" Margin="1290,40,0,0" VerticalAlignment="Top" FontSize="20" Click="LoginButtonClick" HorizontalAlignment="Left" />
-        <local:BaseButton Content="Register" Style="{StaticResource SecondaryButtonStyle}" Height="50" Width="100" Margin="1180,40,0,0" VerticalAlignment="Top" FontSize="20" Click="RegisterButtonClick" HorizontalAlignment="Left"/>
+        <local:BaseButton Content="Register" Style="{StaticResource SecondaryButtonStyle}" Height="50" Width="110" Margin="1170,40,0,0" VerticalAlignment="Top" FontSize="20" Click="RegisterButtonClick" HorizontalAlignment="Left"/>
     </Grid>
 </Window>

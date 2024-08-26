@@ -391,19 +391,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\uif79177\\.nuget\\packages\\": {}
+    "C:\\Users\\Bence\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\PWLocker.csproj",
+      "projectUniqueName": "A:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\PWLocker.csproj",
       "projectName": "PWLocker",
-      "projectPath": "D:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\PWLocker.csproj",
-      "packagesPath": "C:\\Users\\uif79177\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\obj\\",
+      "projectPath": "A:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\PWLocker.csproj",
+      "packagesPath": "C:\\Users\\Bence\\.nuget\\packages\\",
+      "outputPath": "A:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\uif79177\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Bence\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -411,7 +411,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -459,7 +458,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
