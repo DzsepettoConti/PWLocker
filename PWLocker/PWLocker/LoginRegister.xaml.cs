@@ -100,6 +100,8 @@ namespace PWLocker
                 string[] parts = element.Split(";");
                 if (parts[0] == mainUsername)
                 {
+                   
+                    
                     if (parts[1] == mainPassword)
                     {
                         MessageBox.Show($"Sikeres bejelentkezés ide: {mainUsername}");

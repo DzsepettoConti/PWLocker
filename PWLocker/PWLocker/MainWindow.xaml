@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PWLocker"
         mc:Ignorable="d" x:Name="_BaseButton"
-        Title="MainWindow" Height="800" Width="1400" Loaded="mainWindowLoad">
+        Title="MainWindow" Height="600" Width="900" Loaded="mainWindowLoad">
     <Window.Resources>
 
 
@@ -15,11 +15,11 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"  />
+            <RowDefinition Height="80"  />
             <RowDefinition />
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <TextBlock Background="LightBlue" Grid.Row="0"/>
+        <TextBlock Background="#9575CD" Grid.Row="0"/>
         <TextBlock Background="Indigo" Grid.Row="2"/>
 
         <Grid Grid.Row="1" Grid.ColumnSpan="2" >
@@ -28,22 +28,22 @@
                 <ColumnDefinition Width=".1*" />
                 <ColumnDefinition Width=".9*" />
             </Grid.ColumnDefinitions>
-            <TextBlock Background="Azure" Grid.Row="1" Grid.Column="0"/>
-            <TextBlock Background="BlanchedAlmond" Grid.Row="1" Grid.Column="1"/>
+            <TextBlock Background="#bb99e1" Grid.Row="1" Grid.Column="0"/>
+            <TextBlock Background="#bb99e1" Grid.Row="1" Grid.Column="1"/>
             <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Grid.Column="0">
                 <StackPanel>
-                    <local:BaseButton Content="Add new" Style="{StaticResource PrimaryButtonStyle}" Height="80" Width="100" Margin="10" Click="addButtonClick" />
-                    <local:BaseButton Content="Coming soon..." Style="{StaticResource PrimaryButtonStyle}" Height="80" Width="100" Margin="10" />
+                    <local:BaseButton Content="Add new" Style="{StaticResource PrimaryButtonStyle}" Height="80" Width="80" Margin="0,10,0,0" Padding="0" Click="addButtonClick" />
+                    <local:BaseButton Content="Coming soon..." Style="{StaticResource PrimaryButtonStyle}" Height="80" Width="80" Margin="0,10,0,0" Padding="0" />
                 </StackPanel>
             </ScrollViewer>
             <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Grid.Column="1">
-                <StackPanel Name="MainStackPanel">
+                <StackPanel Name="mainStackPanel">
 
                 </StackPanel>
             </ScrollViewer>
         </Grid>
-        <Label Content="username" HorizontalAlignment="Left"  VerticalAlignment="Center" Name="lbUsername" Height="50" Width="100" Margin="1050,40,0,0" FontSize="20"/>
-        <local:BaseButton Content="Login" Style="{StaticResource SecondaryButtonStyle}" Height="50" Width="100" Margin="1290,40,0,0" VerticalAlignment="Top" FontSize="20" Click="LoginButtonClick" HorizontalAlignment="Left" />
-        <local:BaseButton Content="Register" Style="{StaticResource SecondaryButtonStyle}" Height="50" Width="110" Margin="1170,40,0,0" VerticalAlignment="Top" FontSize="20" Click="RegisterButtonClick" HorizontalAlignment="Left"/>
+        <Label Content="username" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="lbUsername" Height="50" Width="100" Margin="561,23,0,0" FontSize="20"/>
+        <local:BaseButton Content="Login" x:Name="btnLogin" Style="{StaticResource SecondaryButtonStyle}" Height="50" Width="100" Margin="786,14,0,0" VerticalAlignment="Top" FontSize="20" Click="LoginButtonClick" HorizontalAlignment="Left" />
+        <local:BaseButton Content="Register" x:Name="btnRegister" Style="{StaticResource SecondaryButtonStyle}" Height="50" Width="110" Margin="666,14,0,0" VerticalAlignment="Top" FontSize="20" Click="RegisterButtonClick" HorizontalAlignment="Left"/>
     </Grid>
 </Window>

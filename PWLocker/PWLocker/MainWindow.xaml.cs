@@ -26,7 +26,7 @@ namespace PWLocker
     {
         List<string> elementList = new List<string>();
         private static int szamlalalo;
-        DockerElement de;
+        DockerElement de = new DockerElement();
 
         public MainWindow()
         {
@@ -41,7 +41,7 @@ namespace PWLocker
         IFirebaseClient client;
         private void mainWindowLoad(object sender, RoutedEventArgs e)
         {
-
+            lbUsername.Visibility = Visibility.Hidden;
             try
             {
                 client = new FireSharp.FirebaseClient(fconfig);
@@ -52,78 +52,11 @@ namespace PWLocker
             }
 
         }
-        public static int Szamlalalo { get => szamlalalo; set => szamlalalo = value; }
-
         public static int GenNextId()
         {
             szamlalalo++;
             return szamlalalo;
             
-        }
-        public void addButtonFunction(string Title)
-        {
-            // Create a new DockPanel
-            DockPanel newDockPanel = new DockPanel
-            {
-
-                Height = 50,
-                Width = 700,
-                Margin = new Thickness(10)
-            };
-
-            // Create the TextBox
-            TextBox myTextBox = new TextBox
-            {
-                Name = Title,
-                Text = Title,
-                Width = 200,
-                Height = 50,
-                FontSize = 36
-            };
-            newDockPanel.Children.Add(myTextBox);
-
-            // Create the first Button
-            Button button1 = new Button
-            {
-
-                Height = 30,
-                Width = 70,
-                Margin = new Thickness(180, 0, 0, 0)
-            };
-            newDockPanel.Children.Add(button1);
-
-            // Create the second Button
-            Button button2 = new Button
-            {
-                Height = 30,
-                Width = 70,
-                Margin = new Thickness(10, 0, 0, 0)
-            };
-            newDockPanel.Children.Add(button2);
-
-            // Create the third Button
-            Button button3 = new Button
-            {
-                Height = 30,
-                Width = 70,
-                Margin = new Thickness(10, 0, 0, 0)
-            };
-            newDockPanel.Children.Add(button3);
-
-            // Create the fourth Button with TextBlock content
-            Button button4 = new Button
-            {
-                Content = "Remove",
-                Height = 30,
-                Width = 70,
-                Margin = new Thickness(10, 0, 10, 0)
-            };
-            button4.Click += deleteButtonClick;
-
-            newDockPanel.Children.Add(button4);
-
-            // Add the DockPanel to the StackPanel
-            MainStackPanel.Children.Add(newDockPanel);
         }
         private void addButtonClick(object sender, RoutedEventArgs e)
         {
@@ -132,14 +65,13 @@ namespace PWLocker
             if (addForm.ShowDialog() == true)
             {
                 GenNextId();
-                addButtonFunction(addForm.TitleText);
+                de.addButtonFunction(addForm.TitleText, mainStackPanel, deleteButtonClick);
             }
         }
 
         async void LiveCall(string currentusername)
         {
             string databasePath = $"Users/{currentusername}/Elements/";
-            MessageBox.Show(databasePath);
             FirebaseResponse res = client.Get(@$"{databasePath}");
             Dictionary<string, DockerElement> data = JsonConvert.DeserializeObject<Dictionary<string, DockerElement>>(res.Body.ToString());
             if (data != null && data.Count > 0)
@@ -177,7 +109,7 @@ namespace PWLocker
                 }
                 if (dockPanel != null)
                 {
-                    MainStackPanel.Children.Remove(dockPanel);
+                    mainStackPanel.Children.Remove(dockPanel);
                 }
             }
             else if (valasz == MessageBoxResult.No)
@@ -188,6 +120,7 @@ namespace PWLocker
 
         private void LoginButtonClick(object sender, RoutedEventArgs e)
         {
+            
             LoginRegister logreg = new LoginRegister();
             logreg.btnLogin.Visibility = Visibility.Visible;
             logreg.btnRegister.Visibility = Visibility.Hidden;
@@ -196,13 +129,25 @@ namespace PWLocker
             if (logreg.ShowDialog() == true)
             {
                 lbUsername.Content = logreg.mainUsername;
+                lbUsername.Visibility = Visibility.Visible;
+                lbUsername.Margin = new Thickness(750,23,0,0);
+                btnRegister.Visibility = Visibility.Hidden;
+                btnLogin.Visibility = Visibility.Hidden;
                 string currentusername = Convert.ToString(lbUsername.Content);
-                MessageBox.Show($"Ez a user: {currentusername}");
+                
                 LiveCall(currentusername);
                 foreach (string element in elementList)
                 {
                     string[] parts = element.Split(";");
-                    addButtonFunction(parts[0]);
+                    if (mainStackPanel != null)
+                    {
+                        de.addButtonFunction(parts[0], mainStackPanel, deleteButtonClick);
+                    }
+                    else
+                    {
+                        MessageBox.Show("mainStackPanel is null");
+                    }
+                    
                 }
             }
         }
@@ -217,6 +162,10 @@ namespace PWLocker
             if (logreg.ShowDialog() == true)
             {
                 lbUsername.Content = logreg.mainUsername;
+                lbUsername.Visibility = Visibility.Visible;
+                lbUsername.Margin = new Thickness(750, 23, 0, 0);
+                btnRegister.Visibility = Visibility.Hidden;
+                btnLogin.Visibility = Visibility.Hidden;
                 string currentusername = Convert.ToString(lbUsername.Content);
                 LiveCall(currentusername);
             }
