@@ -28,6 +28,7 @@ namespace PWLocker
         public string MainUser { get; private set; }
 
         public string PasswordText { get; private set; }
+        public string EncryptedPassword { get; private set; }
         public string EmailText { get; private set; }
 
         public AddForm()
@@ -71,19 +72,16 @@ namespace PWLocker
         }
         private void SubmitClick(object sender, RoutedEventArgs e)
         {
-
-            //LoginRegister lr = new LoginRegister();
-
             TitleText = tbTitle.Text;
             UsernameText = tbUsername.Text;
             PasswordText = tbPassword.Text;
             EmailText = tbEmail.Text;
-
-            DockerElement de = new DockerElement(TitleText,UsernameText,PasswordText,EmailText);
+            EncryptDecrypt ed = new EncryptDecrypt(Convert.ToString(TitleText.Length), Convert.ToString(TitleText.Length));
+            EncryptedPassword = ed.Encrypt(PasswordText);
+            DockerElement de = new DockerElement(TitleText,UsernameText,EmailText, EncryptedPassword);
 
             var setter = client.Set($"Users/{MainUser}/Elements/" + TitleText, de);
             MessageBox.Show($"Data Inserted:{MainUser}");
-
 
             this.DialogResult = true;
            

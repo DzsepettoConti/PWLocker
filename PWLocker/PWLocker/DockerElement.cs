@@ -38,7 +38,7 @@ namespace PWLocker
             return ObjectTitle + ";" + User + ";" + Email + ";"+password+ ";"+ Azonosito;
         }
 
-        public void addButtonFunction(string Title, StackPanel stackpanel, RoutedEventHandler buttonclick)
+        public void addButtonFunction(string Title, StackPanel stackpanel, RoutedEventHandler copyPasswordButtonClick, RoutedEventHandler removeButtonClick)
         {
             // Create a new DockPanel
             DockPanel newDockPanel = new DockPanel
@@ -84,6 +84,7 @@ namespace PWLocker
                 Width = 70,
                 Margin = new Thickness(10, 0, 0, 0)
             };
+            button3.Click += copyPasswordButtonClick;
             newDockPanel.Children.Add(button3);
 
             // Create the fourth Button with TextBlock content
@@ -94,7 +95,7 @@ namespace PWLocker
                 Width = 70,
                 Margin = new Thickness(10, 0, 10, 0)
             };
-            button4.Click += buttonclick;
+            button4.Click += removeButtonClick;
             newDockPanel.Children.Add(button4);
 
             // Create the Border and add the DockPanel to it

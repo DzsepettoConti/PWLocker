@@ -27,7 +27,6 @@ namespace PWLocker
         List<string> elementList = new List<string>();
         private static int szamlalalo;
         DockerElement de = new DockerElement();
-
         public MainWindow()
         {
             InitializeComponent();
@@ -65,7 +64,7 @@ namespace PWLocker
             if (addForm.ShowDialog() == true)
             {
                 GenNextId();
-                de.addButtonFunction(addForm.TitleText, mainStackPanel, deleteButtonClick);
+                de.addButtonFunction(addForm.TitleText, mainStackPanel, deleteButtonClick, CopyPasswordClick);
             }
         }
 
@@ -96,21 +95,26 @@ namespace PWLocker
                 Button button = sender as Button;
 
                 DockPanel dockPanel = button.Parent as DockPanel;
-
-                foreach (var child in dockPanel.Children)
-                {
-                    if (child is TextBox)
-                    {
-                        string currentusername = Convert.ToString(lbUsername.Content);
-                        TextBox foundTextBox = (TextBox)child;
-                        textboxName = foundTextBox.Name;
-                        var result = client.Delete(@$"Users/{currentusername}/Elements/" + textboxName);
-                    }
-                }
+                Border border = dockPanel.Parent as Border;
                 if (dockPanel != null)
                 {
-                    mainStackPanel.Children.Remove(dockPanel);
+                    
+                    foreach (var child in dockPanel.Children)
+                    {
+                        if (child is Label)
+                        {
+                            string currentusername = Convert.ToString(lbUsername.Content);
+                            Label foundLabel = (Label)child;
+                            string foundLabelText = foundLabel.Name;
+                            
+                            var result = client.Delete(@$"Users/{currentusername}/Elements/" + foundLabelText);
+                        }
+                    }
                 }
+                if (border != null)
+                {
+                    mainStackPanel.Children.Remove(border);
+                } 
             }
             else if (valasz == MessageBoxResult.No)
             {
@@ -118,6 +122,33 @@ namespace PWLocker
             }
         }
 
+        private void CopyPasswordClick(object sender, RoutedEventArgs e) 
+        {
+            string textboxName;
+
+                Button button = sender as Button;
+
+                DockPanel dockPanel = button.Parent as DockPanel;
+                Border border = dockPanel.Parent as Border;
+                if (dockPanel != null)
+                {
+                    foreach (var child in dockPanel.Children)
+                    {
+                        if (child is Label)
+                        {
+                            string currentusername = Convert.ToString(lbUsername.Content);
+                            Label foundLabel = (Label)child;
+                            string foundLabelText = foundLabel.Name;
+
+                            var result = client.Get(@$"Users/{currentusername}/Elements/" + foundLabelText);
+                        }
+                    }
+                }
+                if (border != null)
+                {
+                    mainStackPanel.Children.Remove(border);
+                }
+        }
         private void LoginButtonClick(object sender, RoutedEventArgs e)
         {
             
@@ -141,7 +172,7 @@ namespace PWLocker
                     string[] parts = element.Split(";");
                     if (mainStackPanel != null)
                     {
-                        de.addButtonFunction(parts[0], mainStackPanel, deleteButtonClick);
+                        de.addButtonFunction(parts[0], mainStackPanel, deleteButtonClick, CopyPasswordClick);
                     }
                     else
                     {

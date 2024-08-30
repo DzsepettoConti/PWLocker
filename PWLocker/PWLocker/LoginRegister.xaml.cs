@@ -100,9 +100,10 @@ namespace PWLocker
                 string[] parts = element.Split(";");
                 if (parts[0] == mainUsername)
                 {
-                   
-                    
-                    if (parts[1] == mainPassword)
+                    string KeyandIV = Convert.ToString(mainUsername.Length);
+                    EncryptDecrypt ed = new EncryptDecrypt(KeyandIV, KeyandIV);
+                    string decryptedpassword = ed.Decrypt(parts[1]);
+                    if (decryptedpassword == mainPassword)
                     {
                         MessageBox.Show($"Sikeres bejelentkezés ide: {mainUsername}");
                         this.DialogResult = true;
@@ -125,7 +126,7 @@ namespace PWLocker
             mainPassword = tbPassword.Text;
 
             userList.Clear();
-            MainUser mu = new MainUser(mainUsername, mainPassword);
+            
 
             FirebaseResponse res = client.Get(@"Users");
             string datatest = res.Body;
@@ -155,6 +156,11 @@ namespace PWLocker
                 pwCheck();
                 if (pwOK)
                 {
+                    string KeyandIV = Convert.ToString(mainUsername.Length);
+                    EncryptDecrypt ed = new EncryptDecrypt(KeyandIV, KeyandIV);
+                    string encryptedpassword = ed.Encrypt(mainPassword);
+
+                    MainUser mu = new MainUser(mainUsername, encryptedpassword);
                     var setter = client.Set("Users/" + tbUsername.Text, mu);
                     MessageBox.Show("Felhasználó létre hozva");
                     this.DialogResult = true;
