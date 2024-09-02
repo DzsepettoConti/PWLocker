@@ -49,13 +49,13 @@ namespace PWLocker
             {
                 MessageBox.Show("Net Error");
             }
-
         }
+
         public static int GenNextId()
         {
             szamlalalo++;
             return szamlalalo;
-            
+
         }
         private void addButtonClick(object sender, RoutedEventArgs e)
         {
@@ -64,7 +64,7 @@ namespace PWLocker
             if (addForm.ShowDialog() == true)
             {
                 GenNextId();
-                de.addButtonFunction(addForm.TitleText, mainStackPanel, deleteButtonClick, CopyPasswordClick);
+                de.addButtonFunction(addForm.TitleText, mainStackPanel, CopyUsernameClick, CopyEmailClick, CopyPasswordClick, deleteButtonClick);
             }
         }
 
@@ -83,7 +83,105 @@ namespace PWLocker
                 File.WriteAllLines("databaseTest.txt", elementList);
             }
         }
+        private void CopyUsernameClick(object sender, RoutedEventArgs e)
+        {
+            string textboxName;
+            Button button = sender as Button;
 
+            DockPanel dockPanel = button.Parent as DockPanel;
+            Border border = dockPanel.Parent as Border;
+            if (dockPanel != null)
+            {
+                foreach (var child in dockPanel.Children)
+                {
+                    if (child is Label)
+                    {
+                        string currentusername = Convert.ToString(lbUsername.Content);
+                        Label foundLabel = (Label)child;
+                        string foundLabelText = foundLabel.Name;
+                        foreach (string element in elementList)
+                        {
+                            string[] parts = element.Split(";");
+
+                            if (parts[0] == foundLabelText)
+                            {
+
+                                Clipboard.SetText(parts[1]);
+                            }
+
+                        }
+
+                    }
+                }
+            }
+        }
+        private void CopyEmailClick(object sender, RoutedEventArgs e)
+        {
+            string textboxName;
+            Button button = sender as Button;
+
+            DockPanel dockPanel = button.Parent as DockPanel;
+            Border border = dockPanel.Parent as Border;
+            if (dockPanel != null)
+            {
+                foreach (var child in dockPanel.Children)
+                {
+                    if (child is Label)
+                    {
+                        string currentusername = Convert.ToString(lbUsername.Content);
+                        Label foundLabel = (Label)child;
+                        string foundLabelText = foundLabel.Name;
+                        foreach (string element in elementList)
+                        {
+                            string[] parts = element.Split(";");
+
+                            if (parts[0] == foundLabelText)
+                            {
+
+                                Clipboard.SetText(parts[2]);
+                            }
+
+                        }
+
+                    }
+                }
+            }
+        }
+        private void CopyPasswordClick(object sender, RoutedEventArgs e)
+        {
+
+            string textboxName;
+
+            Button button = sender as Button;
+
+            DockPanel dockPanel = button.Parent as DockPanel;
+            Border border = dockPanel.Parent as Border;
+            if (dockPanel != null)
+            {
+                foreach (var child in dockPanel.Children)
+                {
+                    if (child is Label)
+                    {
+                        string currentusername = Convert.ToString(lbUsername.Content);
+                        Label foundLabel = (Label)child;
+                        string foundLabelText = foundLabel.Name;
+                        foreach (string element in elementList)
+                        {
+                            string[] parts = element.Split(";");
+
+                            if (parts[0] == foundLabelText)
+                            {
+                                EncryptDecrypt ec = new EncryptDecrypt(Convert.ToString(foundLabelText.Length), Convert.ToString(foundLabelText.Length));
+                                string DecryptToClipboard = ec.Decrypt(parts[3]);
+                                Clipboard.SetText(DecryptToClipboard);
+                            }
+
+                        }
+
+                    }
+                }
+            }
+        }
         private void deleteButtonClick(object sender, RoutedEventArgs e)
         {
             string textboxName;
@@ -98,7 +196,7 @@ namespace PWLocker
                 Border border = dockPanel.Parent as Border;
                 if (dockPanel != null)
                 {
-                    
+
                     foreach (var child in dockPanel.Children)
                     {
                         if (child is Label)
@@ -106,7 +204,7 @@ namespace PWLocker
                             string currentusername = Convert.ToString(lbUsername.Content);
                             Label foundLabel = (Label)child;
                             string foundLabelText = foundLabel.Name;
-                            
+
                             var result = client.Delete(@$"Users/{currentusername}/Elements/" + foundLabelText);
                         }
                     }
@@ -114,44 +212,16 @@ namespace PWLocker
                 if (border != null)
                 {
                     mainStackPanel.Children.Remove(border);
-                } 
+                }
             }
             else if (valasz == MessageBoxResult.No)
             {
                 MessageBox.Show("A Nem gombra kattintottál.");
             }
         }
-
-        private void CopyPasswordClick(object sender, RoutedEventArgs e) 
-        {
-            string textboxName;
-
-                Button button = sender as Button;
-
-                DockPanel dockPanel = button.Parent as DockPanel;
-                Border border = dockPanel.Parent as Border;
-                if (dockPanel != null)
-                {
-                    foreach (var child in dockPanel.Children)
-                    {
-                        if (child is Label)
-                        {
-                            string currentusername = Convert.ToString(lbUsername.Content);
-                            Label foundLabel = (Label)child;
-                            string foundLabelText = foundLabel.Name;
-
-                            var result = client.Get(@$"Users/{currentusername}/Elements/" + foundLabelText);
-                        }
-                    }
-                }
-                if (border != null)
-                {
-                    mainStackPanel.Children.Remove(border);
-                }
-        }
         private void LoginButtonClick(object sender, RoutedEventArgs e)
         {
-            
+
             LoginRegister logreg = new LoginRegister();
             logreg.btnLogin.Visibility = Visibility.Visible;
             logreg.btnRegister.Visibility = Visibility.Hidden;
@@ -161,24 +231,24 @@ namespace PWLocker
             {
                 lbUsername.Content = logreg.mainUsername;
                 lbUsername.Visibility = Visibility.Visible;
-                lbUsername.Margin = new Thickness(750,23,0,0);
+                lbUsername.Margin = new Thickness(750, 23, 0, 0);
                 btnRegister.Visibility = Visibility.Hidden;
                 btnLogin.Visibility = Visibility.Hidden;
                 string currentusername = Convert.ToString(lbUsername.Content);
-                
+
                 LiveCall(currentusername);
                 foreach (string element in elementList)
                 {
                     string[] parts = element.Split(";");
                     if (mainStackPanel != null)
                     {
-                        de.addButtonFunction(parts[0], mainStackPanel, deleteButtonClick, CopyPasswordClick);
+                        de.addButtonFunction(parts[0], mainStackPanel, CopyUsernameClick, CopyEmailClick, CopyPasswordClick, deleteButtonClick);
                     }
                     else
                     {
                         MessageBox.Show("mainStackPanel is null");
                     }
-                    
+
                 }
             }
         }

@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "D:\\GitHub\\PWLocker\\PWLocker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|d:\\github\\pwlocker\\pwlocker\\pwlocker\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|solutionrelative:pwlocker\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|d:\\github\\pwlocker\\pwlocker\\pwlocker\\dockerelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|solutionrelative:pwlocker\\dockerelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|d:\\github\\pwlocker\\pwlocker\\pwlocker\\mainuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|solutionrelative:pwlocker\\mainuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|d:\\github\\pwlocker\\pwlocker\\pwlocker\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|solutionrelative:pwlocker\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|d:\\github\\pwlocker\\pwlocker\\pwlocker\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|solutionrelative:pwlocker\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|d:\\github\\pwlocker\\pwlocker\\pwlocker\\loginregister.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|solutionrelative:pwlocker\\loginregister.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|d:\\github\\pwlocker\\pwlocker\\pwlocker\\mainuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|solutionrelative:pwlocker\\mainuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|d:\\github\\pwlocker\\pwlocker\\pwlocker\\addform.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|d:\\github\\pwlocker\\pwlocker\\pwlocker\\addform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|solutionrelative:pwlocker\\addform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|d:\\github\\pwlocker\\pwlocker\\pwlocker\\loginregister.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|solutionrelative:pwlocker\\loginregister.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7B0A497-7300-4881-A564-38EAEB1DEBC3}|PWLocker\\PWLocker.csproj|d:\\github\\pwlocker\\pwlocker\\pwlocker\\pwlocker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -50,32 +50,30 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AddForm.xaml",
               "DocumentMoniker": "D:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\AddForm.xaml",
               "RelativeDocumentMoniker": "PWLocker\\AddForm.xaml",
               "ToolTip": "D:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\AddForm.xaml",
               "RelativeToolTip": "PWLocker\\AddForm.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-30T08:47:04.252Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T08:47:04.252Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "PWLocker",
+              "Title": "PWLocker.csproj",
               "DocumentMoniker": "D:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\PWLocker.csproj",
               "RelativeDocumentMoniker": "PWLocker\\PWLocker.csproj",
               "ToolTip": "D:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\PWLocker.csproj",
               "RelativeToolTip": "PWLocker\\PWLocker.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-30T08:39:51.029Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T08:39:51.029Z"
             },
             {
               "$type": "Document",
@@ -87,51 +85,49 @@
               "RelativeToolTip": "PWLocker\\EncryptDecrypt.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAwwDQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T07:40:11.693Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-29T07:40:11.693Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "LoginRegister.xaml.cs",
               "DocumentMoniker": "D:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\LoginRegister.xaml.cs",
               "RelativeDocumentMoniker": "PWLocker\\LoginRegister.xaml.cs",
               "ToolTip": "D:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\LoginRegister.xaml.cs",
               "RelativeToolTip": "PWLocker\\LoginRegister.xaml.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAzwGEAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAcwGEAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T10:31:06.807Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-26T10:31:06.807Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "DockerElement.cs",
               "DocumentMoniker": "D:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\DockerElement.cs",
               "RelativeDocumentMoniker": "PWLocker\\DockerElement.cs",
               "ToolTip": "D:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\DockerElement.cs",
               "RelativeToolTip": "PWLocker\\DockerElement.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAnwCgAAABdAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAD4v0UAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-30T13:20:15.603Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "PWLocker\\MainWindow.xaml.cs",
               "ToolTip": "D:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\MainWindow.xaml.cs",
               "RelativeToolTip": "PWLocker\\MainWindow.xaml.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAxwEEAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAADwvx4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-27T11:38:24.017Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MainUser.cs",
               "DocumentMoniker": "D:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\MainUser.cs",
               "RelativeDocumentMoniker": "PWLocker\\MainUser.cs",
@@ -139,12 +135,11 @@
               "RelativeToolTip": "PWLocker\\MainUser.cs",
               "ViewState": "AgIAABEAAAAAAAAAAADwvx8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T08:26:52.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-27T08:26:52.135Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\MainWindow.xaml",
               "RelativeDocumentMoniker": "PWLocker\\MainWindow.xaml",
@@ -156,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AddForm.xaml.cs",
               "DocumentMoniker": "D:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\AddForm.xaml.cs",
               "RelativeDocumentMoniker": "PWLocker\\AddForm.xaml.cs",
@@ -164,8 +159,7 @@
               "RelativeToolTip": "PWLocker\\AddForm.xaml.cs",
               "ViewState": "AgIAADoAAAAAAAAAAAAYwFQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T08:47:08.548Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T08:47:08.548Z"
             },
             {
               "$type": "Document",

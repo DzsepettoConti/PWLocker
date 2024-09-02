@@ -38,7 +38,7 @@ namespace PWLocker
             return ObjectTitle + ";" + User + ";" + Email + ";"+password+ ";"+ Azonosito;
         }
 
-        public void addButtonFunction(string Title, StackPanel stackpanel, RoutedEventHandler copyPasswordButtonClick, RoutedEventHandler removeButtonClick)
+        public void addButtonFunction(string Title, StackPanel stackpanel, RoutedEventHandler copyUsernameClick, RoutedEventHandler copyEmailButtonClick, RoutedEventHandler copyPasswordButtonClick, RoutedEventHandler removeButtonClick)
         {
             // Create a new DockPanel
             DockPanel newDockPanel = new DockPanel
@@ -62,26 +62,31 @@ namespace PWLocker
             // Create the first Button
             Button button1 = new Button
             {
+                Content = "Copy Username",
                 Height = 30,
-                Width = 70,
-                Margin = new Thickness(180, 0, 0, 0)
+                Width = 100,
+                Margin = new Thickness(50, 0, 0, 0)
             };
+            button1.Click += copyUsernameClick;
             newDockPanel.Children.Add(button1);
 
             // Create the second Button
             Button button2 = new Button
             {
+                Content = "Copy Email",
                 Height = 30,
-                Width = 70,
+                Width = 100,
                 Margin = new Thickness(10, 0, 0, 0)
             };
+            button2.Click += copyEmailButtonClick;
             newDockPanel.Children.Add(button2);
 
             // Create the third Button
             Button button3 = new Button
             {
+                Content = "Copy Password",
                 Height = 30,
-                Width = 70,
+                Width = 100,
                 Margin = new Thickness(10, 0, 0, 0)
             };
             button3.Click += copyPasswordButtonClick;
@@ -92,7 +97,7 @@ namespace PWLocker
             {
                 Content = "Remove",
                 Height = 30,
-                Width = 70,
+                Width = 100,
                 Margin = new Thickness(10, 0, 10, 0)
             };
             button4.Click += removeButtonClick;
