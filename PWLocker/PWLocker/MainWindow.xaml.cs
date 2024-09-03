@@ -38,8 +38,12 @@ namespace PWLocker
             BasePath = "https://pwlocker-8782c-default-rtdb.europe-west1.firebasedatabase.app/"
         };
         IFirebaseClient client;
-        private void mainWindowLoad(object sender, RoutedEventArgs e)
+        private async void mainWindowLoad(object sender, RoutedEventArgs e)
         {
+            //WebWatcher watcher = new WebWatcher();
+            //await watcher.StartMonitoring();
+
+
             lbUsername.Visibility = Visibility.Hidden;
             try
             {
