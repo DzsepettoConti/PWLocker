@@ -24,7 +24,6 @@ using Newtonsoft.Json;
 namespace PWLocker
 {
     /// <summary>
-    /// Interaction logic for LoginRegister.xaml
     /// </summary>
     public partial class LoginRegister : Window
     {
@@ -57,9 +56,9 @@ namespace PWLocker
 
         private void pwCheck()
         {
-            if (tbPassword.Text.Length > 5)
+            if (tbPassword.Password.Length > 5)
             {
-                if (tbPassword.Text != tbPassword2.Text)
+                if (tbPassword.Password != tbPassword2.Password)
                 {
                     MessageBox.Show("Nem egyeznek a jelszók");
                     pwOK = false;
@@ -75,12 +74,10 @@ namespace PWLocker
                 pwOK = false;
             }
         }
-
-
         private void lrWindowLoginClick(object sender, RoutedEventArgs e)
         {
             mainUsername = tbUsername.Text;
-            mainPassword = tbPassword.Text;
+            mainPassword = tbPassword.Password;
 
             userList.Clear();
             MainUser mu = new MainUser(mainUsername, mainPassword);
@@ -117,13 +114,10 @@ namespace PWLocker
             }
             
         }
-
-
-        
         private void lrWindowRegisterClick(object sender, RoutedEventArgs e)
         {
             mainUsername = tbUsername.Text;
-            mainPassword = tbPassword.Text;
+            mainPassword = tbPassword.Password;
 
             userList.Clear();
             

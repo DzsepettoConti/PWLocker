@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "bBk4jAXN6bo=",
+  "dgSpecHash": "gZFWJG4yQixCJ5B+ZiSUb/rHPzS08YD9ljeRBji6P34MXs8xBCIZJjv8NUhKSkRUKrVma9oxa+vjHE9JApo4+A==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\PWLocker\\PWLocker\\PWLocker\\PWLocker.csproj",
+  "projectFilePath": "C:\\Users\\ow949g\\PWL\\PWLocker\\PWLocker\\PWLocker\\PWLocker.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\uif79177\\.nuget\\packages\\firesharp\\2.0.4\\firesharp.2.0.4.nupkg.sha512",
-    "C:\\Users\\uif79177\\.nuget\\packages\\microsoft.bcl\\1.1.9\\microsoft.bcl.1.1.9.nupkg.sha512",
-    "C:\\Users\\uif79177\\.nuget\\packages\\microsoft.bcl.async\\1.0.168\\microsoft.bcl.async.1.0.168.nupkg.sha512",
-    "C:\\Users\\uif79177\\.nuget\\packages\\microsoft.bcl.build\\1.0.14\\microsoft.bcl.build.1.0.14.nupkg.sha512",
-    "C:\\Users\\uif79177\\.nuget\\packages\\microsoft.net.http\\2.2.28\\microsoft.net.http.2.2.28.nupkg.sha512",
-    "C:\\Users\\uif79177\\.nuget\\packages\\newtonsoft.json\\6.0.4\\newtonsoft.json.6.0.4.nupkg.sha512"
+    "C:\\Users\\ow949g\\.nuget\\packages\\firesharp\\2.0.4\\firesharp.2.0.4.nupkg.sha512",
+    "C:\\Users\\ow949g\\.nuget\\packages\\microsoft.bcl\\1.1.9\\microsoft.bcl.1.1.9.nupkg.sha512",
+    "C:\\Users\\ow949g\\.nuget\\packages\\microsoft.bcl.async\\1.0.168\\microsoft.bcl.async.1.0.168.nupkg.sha512",
+    "C:\\Users\\ow949g\\.nuget\\packages\\microsoft.bcl.build\\1.0.14\\microsoft.bcl.build.1.0.14.nupkg.sha512",
+    "C:\\Users\\ow949g\\.nuget\\packages\\microsoft.net.http\\2.2.28\\microsoft.net.http.2.2.28.nupkg.sha512",
+    "C:\\Users\\ow949g\\.nuget\\packages\\newtonsoft.json\\6.0.4\\newtonsoft.json.6.0.4.nupkg.sha512"
   ],
   "logs": [
     {

@@ -74,7 +74,7 @@ namespace PWLocker
         {
             TitleText = tbTitle.Text;
             UsernameText = tbUsername.Text;
-            PasswordText = tbPassword.Text;
+            PasswordText = tbPassword.Password;
             EmailText = tbEmail.Text;
             EncryptDecrypt ed = new EncryptDecrypt(Convert.ToString(TitleText.Length), Convert.ToString(TitleText.Length));
             EncryptedPassword = ed.Encrypt(PasswordText);

@@ -16,7 +16,7 @@ namespace PWLocker
         private static int elementid;
         private string objectTitle, user, email, password;
         private int azonosito;
-       
+
         public DockerElement() { }
 
         public DockerElement(string title, string user, string email, string password)
@@ -35,7 +35,7 @@ namespace PWLocker
 
         public override string ToString()
         {
-            return ObjectTitle + ";" + User + ";" + Email + ";"+password+ ";"+ Azonosito;
+            return ObjectTitle + ";" + User + ";" + Email + ";" + password + ";" + Azonosito;
         }
 
         public void addButtonFunction(string Title, StackPanel stackpanel, RoutedEventHandler copyUsernameClick, RoutedEventHandler copyEmailButtonClick, RoutedEventHandler copyPasswordButtonClick, RoutedEventHandler removeButtonClick)
@@ -55,7 +55,8 @@ namespace PWLocker
                 Content = Title,
                 Width = 200,
                 Height = 50,
-                FontSize = 36
+                FontSize = 36,
+                Foreground = (Brush)new BrushConverter().ConvertFromString("#45a29e"),
             };
             newDockPanel.Children.Add(myLabel);
 
@@ -107,10 +108,10 @@ namespace PWLocker
             Border border = new Border
             {
                 BorderThickness = new Thickness(5),
-                BorderBrush = Brushes.Purple,
+                BorderBrush = (Brush)new BrushConverter().ConvertFromString("#66fcf1"),
                 CornerRadius = new CornerRadius(5),
-                Padding = new Thickness(2),
-                Margin = new Thickness(5),
+                Padding = new Thickness(0),
+                Margin = new Thickness(30,15,30,0),
                 Child = newDockPanel // Add the DockPanel to the Border
             };
 

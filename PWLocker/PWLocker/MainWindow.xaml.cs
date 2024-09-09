@@ -228,6 +228,8 @@ namespace PWLocker
 
             LoginRegister logreg = new LoginRegister();
             logreg.btnLogin.Visibility = Visibility.Visible;
+            logreg.btnLogin.Margin = new Thickness(178, 86, 0, 0); // Left=10, Top=50, Right=0, Bottom=0
+
             logreg.btnRegister.Visibility = Visibility.Hidden;
             logreg.lbPasswordAgain.Visibility = Visibility.Hidden;
             logreg.tbPassword2.Visibility = Visibility.Hidden;

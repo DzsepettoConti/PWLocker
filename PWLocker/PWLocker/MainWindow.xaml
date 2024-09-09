@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PWLocker"
         mc:Ignorable="d" x:Name="_BaseButton"
-        Title="MainWindow" Height="600" Width="900" Loaded="mainWindowLoad">
+        Title="MainWindow" Height="600" Width="910" Loaded="mainWindowLoad"
+        ResizeMode="NoResize">
     <Window.Resources>
 
 

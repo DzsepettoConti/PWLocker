@@ -5,19 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PWLocker"
         mc:Ignorable="d"
-        Title="New Entry Creation" Height="170" Width="350">
-    <Grid Loaded="addFormLoad">
-        <Label Content="Title" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Username" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
-        <Label Content="Email" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="tbTitle" HorizontalAlignment="Left" Margin="105,18,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="tbUsername" HorizontalAlignment="Left" Margin="105,49,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="tbEmail" HorizontalAlignment="Left" Margin="105,80,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="tbPassword" HorizontalAlignment="Left" Margin="105,111,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="120"/>
-        <Button Name="btnSubmit" Width="70" Content="Submit" HorizontalAlignment="Left" Margin="250,80,0,0" VerticalAlignment="Top" Click="SubmitClick"/>
-        <Button Name="btnCancel" Width="70" Content="Cancel" HorizontalAlignment="Left" Margin="250,110,0,0" VerticalAlignment="Top" Click="btnCancel_Click"/>
-
-
+        Title="New Entry Creation" Height="190" Width="350">
+    <Grid Loaded="addFormLoad" Background="#1f2833">
+        <Label Content="Title" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="#66fcf1"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Foreground="#66fcf1"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Foreground="#66fcf1"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" Foreground="#66fcf1"/>
+        <TextBox Name="tbTitle" HorizontalAlignment="Left" Margin="105,18,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" />
+        <TextBox Name="tbUsername" HorizontalAlignment="Left" Margin="105,49,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="tbEmail" HorizontalAlignment="Left" Margin="105,80,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <local:BaseButton Content="Submit" HorizontalAlignment="Left" Margin="247,33,0,0" VerticalAlignment="Top" Height="34" Width="82" Padding="0" Click="SubmitClick"/>
+        <local:BaseButton Content="Cancel" HorizontalAlignment="Left" Margin="247,72,0,0" VerticalAlignment="Top" Height="34" Width="82" Padding="0" Click="btnCancel_Click"/>
+        <PasswordBox Name="tbPassword" HorizontalAlignment="Left" Margin="105,111,0,0" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>
