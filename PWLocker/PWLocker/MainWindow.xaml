@@ -19,17 +19,20 @@
             <RowDefinition />
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <TextBlock Background="#9575CD" Grid.Row="0"/>
-        <TextBlock Background="Indigo" Grid.Row="2"/>
+        <TextBlock Background="#0b0c10" Grid.Row="0"/>
+        <TextBlock Background="#0b0c10" Grid.Row="2"/>
+        <Border Grid.Row="0" Grid.Column="0" BorderThickness="0,0,0,5" BorderBrush="#c5c6c7" />
+
+        <Border Grid.Row="2" Grid.Column="0" BorderThickness="0,5,0,0" BorderBrush="#c5c6c7" />
 
         <Grid Grid.Row="1" Grid.ColumnSpan="2" >
-
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width=".1*" />
                 <ColumnDefinition Width=".9*" />
             </Grid.ColumnDefinitions>
-            <TextBlock Background="#bb99e1" Grid.Row="1" Grid.Column="0"/>
-            <TextBlock Background="#bb99e1" Grid.Row="1" Grid.Column="1"/>
+            <TextBlock Background="#1f2833" Grid.Row="1" Grid.Column="0"/>
+            <TextBlock Background="#1f2833" Grid.Row="1" Grid.Column="1"/>
+            
             <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Grid.Column="0">
                 <StackPanel>
                     <local:BaseButton Content="Add new" Style="{StaticResource PrimaryButtonStyle}" Height="80" Width="80" Margin="0,10,0,0" Padding="0" Click="addButtonClick" />
@@ -41,8 +44,9 @@
 
                 </StackPanel>
             </ScrollViewer>
+            <Border Grid.Row="1" Grid.Column="1" BorderThickness="5,0,0,0" BorderBrush="#c5c6c7" />
         </Grid>
-        <Label Content="username" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="lbUsername" Height="50" Width="100" Margin="561,23,0,0" FontSize="20"/>
+        <Label Content="username" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="lbUsername" Height="50" Width="100" Margin="561,23,0,0" FontSize="20" Foreground="#45a29e"/>
         <local:BaseButton Content="Login" x:Name="btnLogin" Style="{StaticResource SecondaryButtonStyle}" Height="50" Width="100" Margin="786,14,0,0" VerticalAlignment="Top" FontSize="20" Click="LoginButtonClick" HorizontalAlignment="Left" />
         <local:BaseButton Content="Register" x:Name="btnRegister" Style="{StaticResource SecondaryButtonStyle}" Height="50" Width="110" Margin="666,14,0,0" VerticalAlignment="Top" FontSize="20" Click="RegisterButtonClick" HorizontalAlignment="Left"/>
     </Grid>

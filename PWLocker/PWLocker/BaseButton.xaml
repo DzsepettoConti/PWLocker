@@ -6,11 +6,11 @@
         xmlns:local="clr-namespace:PWLocker"
         mc:Ignorable="d">
     <Button.Resources>
-        <SolidColorBrush x:Key="PrimaryPurpleColor" Color="Purple"/>
-        <SolidColorBrush x:Key="PrimaryTextColor" Color="GhostWhite"/>
+        <SolidColorBrush x:Key="PrimaryPurpleColor" Color="#66fcf1"/>
+        <SolidColorBrush x:Key="PrimaryTextColor" Color="#1f2833"/>
         <SolidColorBrush x:Key="ButtonMouseOverColor" Color="DarkBlue"/>
         <SolidColorBrush x:Key="ButtonPressedColor" Color="LightBlue"/>
-        <SolidColorBrush x:Key="PrimaryDarkTextColor" Color="Black"/>
+        <SolidColorBrush x:Key="PrimaryDarkTextColor" Color="GhostWhite"/>
 
         <Style x:Key="PrimaryButtonStyle" TargetType="{x:Type Button}">
             <Setter Property="Background" Value="{DynamicResource PrimaryPurpleColor}"/>
