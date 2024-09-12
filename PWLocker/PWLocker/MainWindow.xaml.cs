@@ -278,6 +278,14 @@ namespace PWLocker
             }
         }
 
+        private void btnSettingsClick(object sender, RoutedEventArgs e)
+        {
+        SettingsWindow sw = new SettingsWindow();
+            if (sw.ShowDialog() == true)
+            {
+                
+            }
+        }
     }
 }
 

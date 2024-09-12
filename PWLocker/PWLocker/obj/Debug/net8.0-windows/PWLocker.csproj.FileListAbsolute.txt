@@ -109,3 +109,5 @@ C:\Users\ow949g\PWL\PWLocker\PWLocker\PWLocker\obj\Debug\net8.0-windows\refint\P
 C:\Users\ow949g\PWL\PWLocker\PWLocker\PWLocker\obj\Debug\net8.0-windows\PWLocker.pdb
 C:\Users\ow949g\PWL\PWLocker\PWLocker\PWLocker\obj\Debug\net8.0-windows\PWLocker.genruntimeconfig.cache
 C:\Users\ow949g\PWL\PWLocker\PWLocker\PWLocker\obj\Debug\net8.0-windows\ref\PWLocker.dll
+D:\GitHub\PWLocker\PWLocker\PWLocker\obj\Debug\net8.0-windows\SettingsWindow.g.cs
+D:\GitHub\PWLocker\PWLocker\PWLocker\obj\Debug\net8.0-windows\SettingsWindow.baml

@@ -12,9 +12,6 @@
 
     </Window.Resources>
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"  />
             <RowDefinition />
@@ -50,5 +47,11 @@
         <Label Content="username" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="lbUsername" Height="50" Width="100" Margin="561,23,0,0" FontSize="20" Foreground="#45a29e"/>
         <local:BaseButton Content="Login" x:Name="btnLogin" Style="{StaticResource SecondaryButtonStyle}" Height="50" Width="100" Margin="786,14,0,0" VerticalAlignment="Top" FontSize="20" Click="LoginButtonClick" HorizontalAlignment="Left" />
         <local:BaseButton Content="Register" x:Name="btnRegister" Style="{StaticResource SecondaryButtonStyle}" Height="50" Width="110" Margin="666,14,0,0" VerticalAlignment="Top" FontSize="20" Click="RegisterButtonClick" HorizontalAlignment="Left"/>
+        <Button Height="50" Width="50" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" Click="btnSettingsClick" Background="Transparent" BorderBrush="{x:Null}">
+            <Image Source="/PNG/SettingsNeon.png" />
+        </Button>
+
+
     </Grid>
 </Window>
+    
