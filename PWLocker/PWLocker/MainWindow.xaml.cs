@@ -27,9 +27,13 @@ namespace PWLocker
         List<string> elementList = new List<string>();
         private static int szamlalalo;
         DockerElement de = new DockerElement();
+        SettingsWindow sw = new SettingsWindow();
         public MainWindow()
         {
             InitializeComponent();
+
+
+
         }
 
         IFirebaseConfig fconfig = new FirebaseConfig()
@@ -277,13 +281,17 @@ namespace PWLocker
                 LiveCall(currentusername);
             }
         }
-
         private void btnSettingsClick(object sender, RoutedEventArgs e)
         {
         SettingsWindow sw = new SettingsWindow();
             if (sw.ShowDialog() == true)
             {
-                
+                if (sw.BGSetDone == true) 
+                {
+                    GridValtoz0.BorderBrush = new SolidColorBrush(sw.BGColor);
+                    GridValtoz1.BorderBrush = new SolidColorBrush(sw.BGColor);
+                    GridValtoz2.BorderBrush = new SolidColorBrush(sw.BGColor);
+                }
             }
         }
     }

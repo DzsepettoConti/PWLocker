@@ -11,9 +11,9 @@
         <Label Content="Username" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Foreground="#66fcf1"/>
         <Label Content="Email" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Foreground="#66fcf1"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" Foreground="#66fcf1"/>
-        <TextBox Name="tbTitle" HorizontalAlignment="Left" Margin="105,18,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" />
-        <TextBox Name="tbUsername" HorizontalAlignment="Left" Margin="105,49,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="tbEmail" HorizontalAlignment="Left" Margin="105,80,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="tbTitle" HorizontalAlignment="Left" Margin="105,18,0,0"  VerticalAlignment="Top" Width="120" />
+        <TextBox Name="tbUsername" HorizontalAlignment="Left" Margin="105,49,0,0"   VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="tbEmail" HorizontalAlignment="Left" Margin="105,80,0,0"   VerticalAlignment="Top" Width="120"/>
         <local:BaseButton Content="Submit" HorizontalAlignment="Left" Margin="247,33,0,0" VerticalAlignment="Top" Height="34" Width="82" Padding="0" Click="SubmitClick"/>
         <local:BaseButton Content="Cancel" HorizontalAlignment="Left" Margin="247,72,0,0" VerticalAlignment="Top" Height="34" Width="82" Padding="0" Click="btnCancel_Click"/>
         <PasswordBox Name="tbPassword" HorizontalAlignment="Left" Margin="105,111,0,0" VerticalAlignment="Top" Width="120"/>

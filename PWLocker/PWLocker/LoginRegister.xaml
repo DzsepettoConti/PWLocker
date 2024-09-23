@@ -12,9 +12,9 @@
         <Label Content="Username" HorizontalAlignment="Left" Margin="13,14,0,0" VerticalAlignment="Top" Foreground="#66fcf1"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="13,44,0,0" VerticalAlignment="Top" Foreground="#66fcf1"/>
         <Label Content="Password again" HorizontalAlignment="Left" Margin="13,74,0,0" VerticalAlignment="Top" Name="lbPasswordAgain" Foreground="#66fcf1"/>
-        <TextBox HorizontalAlignment="Left" Margin="105,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="tbUsername"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="105,52,0,0" VerticalAlignment="Top" Width="120" Name="tbPassword"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="105,78,0,0"  VerticalAlignment="Top" Width="120" Name="tbPassword2"/>
+        <TextBox HorizontalAlignment="Left" Margin="105,22,0,0"  VerticalAlignment="Top" Width="120" Name="tbUsername" />
+        <PasswordBox HorizontalAlignment="Left" Margin="105,52,0,0" VerticalAlignment="Top" Width="120" Name="tbPassword" />
+        <PasswordBox HorizontalAlignment="Left" Margin="105,78,0,0"  VerticalAlignment="Top" Width="120" Name="tbPassword2" />
 
         <local:BaseButton Content="Login" x:Name="btnLogin" HorizontalAlignment="Left" Margin="178,106,0,0" VerticalAlignment="Top" Height="25" Width="47" Padding="0" Click="lrWindowLoginClick"/>
         <local:BaseButton Content="Register" x:Name="btnRegister" HorizontalAlignment="Left" Margin="127,106,0,0" VerticalAlignment="Top" Height="25" Width="46" Padding="0" Click="lrWindowRegisterClick"/>

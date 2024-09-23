@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PWLocker"
-        mc:Ignorable="d" x:Name="_BaseButton"
+        mc:Ignorable="d" x:Name="MainWindow"
         Title="MainWindow" Height="600" Width="910" Loaded="mainWindowLoad"
         ResizeMode="NoResize">
     <Window.Resources>
@@ -19,9 +19,9 @@
         </Grid.RowDefinitions>
         <TextBlock Background="#0b0c10" Grid.Row="0"/>
         <TextBlock Background="#0b0c10" Grid.Row="2"/>
-        <Border Grid.Row="0" Grid.Column="0" BorderThickness="0,0,0,5" BorderBrush="#c5c6c7" />
+        <Border Grid.Row="0" Grid.Column="0" BorderThickness="0,0,0,5" BorderBrush="#c5c6c7" Name="GridValtoz0"/>
 
-        <Border Grid.Row="2" Grid.Column="0" BorderThickness="0,5,0,0" BorderBrush="#c5c6c7" />
+        <Border Grid.Row="2" Grid.Column="0" BorderThickness="0,5,0,0" BorderBrush="#c5c6c7" Name="GridValtoz1"/>
 
         <Grid Grid.Row="1" Grid.ColumnSpan="2" >
             <Grid.ColumnDefinitions>
@@ -42,7 +42,7 @@
 
                 </StackPanel>
             </ScrollViewer>
-            <Border Grid.Row="1" Grid.Column="1" BorderThickness="5,0,0,0" BorderBrush="#c5c6c7" />
+            <Border Grid.Row="1" Grid.Column="1" BorderThickness="5,0,0,0" BorderBrush="#c5c6c7" Name="GridValtoz2" />
         </Grid>
         <Label Content="username" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="lbUsername" Height="50" Width="100" Margin="561,23,0,0" FontSize="20" Foreground="#45a29e"/>
         <local:BaseButton Content="Login" x:Name="btnLogin" Style="{StaticResource SecondaryButtonStyle}" Height="50" Width="100" Margin="786,14,0,0" VerticalAlignment="Top" FontSize="20" Click="LoginButtonClick" HorizontalAlignment="Left" />
