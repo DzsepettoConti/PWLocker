@@ -91,10 +91,5 @@ namespace PWLocker
             this.DialogResult = false;
             this.Close();
         }
-
-        private void testClick(object sender, RoutedEventArgs e)
-        {
-            
-        }
     }
 }

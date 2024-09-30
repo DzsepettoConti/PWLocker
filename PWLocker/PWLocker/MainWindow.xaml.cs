@@ -31,9 +31,6 @@ namespace PWLocker
         public MainWindow()
         {
             InitializeComponent();
-
-
-
         }
 
         IFirebaseConfig fconfig = new FirebaseConfig()
@@ -44,9 +41,7 @@ namespace PWLocker
         IFirebaseClient client;
         private async void mainWindowLoad(object sender, RoutedEventArgs e)
         {
-            //WebWatcher watcher = new WebWatcher();
-            //await watcher.StartMonitoring();
-
+            ThemeSetter();
 
             lbUsername.Visibility = Visibility.Hidden;
             try
@@ -88,7 +83,6 @@ namespace PWLocker
                     string elementString = item.Value.ToString();
                     elementList.Add(elementString);
                 }
-                File.WriteAllLines("databaseTest.txt", elementList);
             }
         }
         private void CopyUsernameClick(object sender, RoutedEventArgs e)
@@ -283,17 +277,30 @@ namespace PWLocker
         }
         private void btnSettingsClick(object sender, RoutedEventArgs e)
         {
-        SettingsWindow sw = new SettingsWindow();
+            SettingsWindow sw = new SettingsWindow();
             if (sw.ShowDialog() == true)
             {
-                if (sw.BGSetDone == true) 
+                if (sw.BGSetDone == true)
                 {
-                    GridValtoz0.BorderBrush = new SolidColorBrush(sw.BGColor);
-                    GridValtoz1.BorderBrush = new SolidColorBrush(sw.BGColor);
-                    GridValtoz2.BorderBrush = new SolidColorBrush(sw.BGColor);
+                    ThemeSetter();
                 }
             }
         }
+
+        public static Color ConvertToMediaColor(System.Drawing.Color drawingColor)
+        {
+            return Color.FromArgb(drawingColor.A, drawingColor.R, drawingColor.G, drawingColor.B);
+
+        }
+        public void ThemeSetter() 
+        {
+            Color mediaColor = (ConvertToMediaColor(Properties.Settings.Default.AppTheme));
+            GridValtoz0.BorderBrush = new SolidColorBrush(mediaColor);
+            GridValtoz1.BorderBrush = new SolidColorBrush(mediaColor);
+            GridValtoz2.BorderBrush = new SolidColorBrush(mediaColor);
+        }
+
+
     }
 }
 

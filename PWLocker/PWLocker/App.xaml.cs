@@ -9,6 +9,9 @@ namespace PWLocker
     /// </summary>
     public partial class App : Application
     {
+
+
+
     }
 
 }

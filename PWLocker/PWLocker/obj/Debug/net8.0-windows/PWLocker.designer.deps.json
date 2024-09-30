@@ -11,12 +11,6 @@
           "Microsoft.Bcl.Async": "1.0.168",
           "Microsoft.Net.Http": "2.2.28",
           "Newtonsoft.Json": "6.0.4"
-        },
-        "runtime": {
-          "lib/portable-net45+sl5+wp8+win8/FireSharp.dll": {
-            "assemblyVersion": "2.0.3.0",
-            "fileVersion": "2.0.3.0"
-          }
         }
       },
       "Microsoft.Bcl/1.1.9": {
@@ -27,20 +21,6 @@
       "Microsoft.Bcl.Async/1.0.168": {
         "dependencies": {
           "Microsoft.Bcl": "1.1.9"
-        },
-        "runtime": {
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.dll": {
-            "assemblyVersion": "1.0.168.0",
-            "fileVersion": "1.0.168.0"
-          },
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.dll": {
-            "assemblyVersion": "1.0.12.0",
-            "fileVersion": "1.0.168.0"
-          },
-          "lib/net40/Microsoft.Threading.Tasks.dll": {
-            "assemblyVersion": "1.0.12.0",
-            "fileVersion": "1.0.168.0"
-          }
         }
       },
       "Microsoft.Bcl.Build/1.0.14": {},
@@ -48,26 +28,9 @@
         "dependencies": {
           "Microsoft.Bcl": "1.1.9",
           "Microsoft.Bcl.Build": "1.0.14"
-        },
-        "runtime": {
-          "lib/net45/System.Net.Http.Extensions.dll": {
-            "assemblyVersion": "2.2.28.0",
-            "fileVersion": "2.2.28.0"
-          },
-          "lib/net45/System.Net.Http.Primitives.dll": {
-            "assemblyVersion": "4.2.28.0",
-            "fileVersion": "4.2.28.0"
-          }
         }
       },
-      "Newtonsoft.Json/6.0.4": {
-        "runtime": {
-          "lib/net45/Newtonsoft.Json.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.4.17603"
-          }
-        }
-      }
+      "Newtonsoft.Json/6.0.4": {}
     }
   },
   "libraries": {

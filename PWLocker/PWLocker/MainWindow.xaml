@@ -4,10 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PWLocker"
-        mc:Ignorable="d" x:Name="MainWindow"
+        mc:Ignorable="d" x:Name="foOldal"
         Title="MainWindow" Height="600" Width="910" Loaded="mainWindowLoad"
         ResizeMode="NoResize">
     <Window.Resources>
+
 
 
     </Window.Resources>
